@@ -4,10 +4,7 @@
   "name": "Python 3",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": "..",
-    "args": {
-      "BUILDKIT_INLINE_CACHE": "1"
-    }
+    "context": ".."
   },
   // Set *default* container specific settings.json values on container create.
   "customizations": {
@@ -25,5 +22,5 @@
   // "forwardPorts": [],
   // Install project dependencies
   "postCreateCommand": "bash ./.devcontainer/post-install.sh",
-  "postStartCommand": "cq-server run"
+  "postStartCommand": "bash --login -c 'conda activate cadquery && cq-server'"
 }

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["poetry-core>=1.0.0", "cadquery"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "cq_venturi"
+version = "0.1.0"
+description = "CadQuery implementation of a venturi tube"
+authors = ["Dror Kronstein <dkronst@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"

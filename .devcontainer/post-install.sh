@@ -1,4 +1,7 @@
 #!/bin/sh
 
 # Install poetry deps:
-poetry install --with dev
+conda init
+source ~/.bashrc
+conda activate cadquery
+poetry install # --with dev
