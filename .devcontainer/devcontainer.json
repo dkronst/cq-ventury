@@ -13,14 +13,15 @@
         "python.linting.enabled": true
       },
     "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance"
-      ]
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "bernhard-42.ocp-cad-viewer"
+    ]
     }
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // Install project dependencies
   "postCreateCommand": "bash ./.devcontainer/post-install.sh",
-  "postStartCommand": "bash --login -c 'conda activate cadquery && cq-server'"
+  "postStartCommand": "bash --login -c 'conda activate cadquery'"
 }

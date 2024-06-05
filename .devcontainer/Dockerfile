@@ -1,6 +1,6 @@
 # install conda container
 #FROM debian:bookworm
-FROM --platform=linux/amd64 debian:bookworm
+FROM debian:bookworm
 
 RUN apt-get update; apt-get install -y wget bzip2 curl git vim python3 python3-pip python3 \
     libgl1 && apt-get clean 
@@ -22,7 +22,6 @@ RUN bash --login -c "conda create -n cadquery -y python=3.12"
 RUN bash --login -c "conda activate cadquery && conda install -y -c conda-forge ocp cadquery pyzmq psutil"
 RUN bash --login -c "conda activate cadquery && pip install jupyter-cadquery"
 
-RUN bash --login -c "conda activate cadquery && pip install cadquery-server"
 # Add poetry:
 RUN bash --login -c "conda activate cadquery && pip install poetry"
 

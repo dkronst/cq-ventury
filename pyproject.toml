@@ -10,3 +10,4 @@ authors = ["Dror Kronstein <dkronst@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+build123d = "^0.5.0"
